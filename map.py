@@ -152,6 +152,8 @@ def deserialize_birthplaces(serializable_birthplaces):
 
 # Define the data file path
 DATA_FILE = "birthplaces.json"
+firstname = ""
+lastname = ""
 
 with GedcomReader("family.ged") as gedcom_doc:
 
@@ -164,7 +166,7 @@ with GedcomReader("family.ged") as gedcom_doc:
         print(f"Loaded birthplaces from {DATA_FILE}")
     else:
         # Find yourself
-        you = find_individual_by_name(gedcom_doc, "you Howard", "Hill")
+        you = find_individual_by_name(gedcom_doc, firstname, lastname)
         if you is None:
             print("User not found in GEDCOM file.")
             exit()
