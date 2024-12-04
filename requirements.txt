@@ -1,0 +1,6 @@
+python-Levenshtein
+fuzzywuzzy
+decouple
+ged4py
+cartopy
+matplotlib
